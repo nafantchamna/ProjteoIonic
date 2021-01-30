@@ -1,4 +1,6 @@
+import { Routes } from '@angular/router';
 import { Component } from '@angular/core';
+import{Router} from '@angular/router'
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(public router:Router) {}
+
+  CarreiraUnica(){
+    this.router.navigate(['carreira-unica',{}]);
+  }
 
 }
